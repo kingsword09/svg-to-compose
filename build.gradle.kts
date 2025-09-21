@@ -1,25 +1,20 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.20"
-    id("maven-publish")
+    alias(libs.plugins.kotlin.jvm)
+    `maven-publish`
 }
 
-group = "br.com.devsrsouza"
-version = "0.11.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-    maven("https://maven.google.com")
-    maven("https://jetbrains.bintray.com/trove4j")
-}
+group = "io.github.kingsword09"
+version = "0.1.0"
 
 dependencies {
-    implementation("com.google.guava:guava:23.0")
-    implementation("com.android.tools:sdk-common:31.6.0")
-    implementation("com.android.tools:common:31.6.0")
-    implementation("com.squareup:kotlinpoet:1.9.0")
-    implementation("org.ogce:xpp3:1.1.6")
+    implementation(libs.google.guava)
+    implementation(libs.android.tools.sdk)
+    implementation(libs.android.tools)
+    implementation(libs.com.squareup)
+    implementation(libs.org.ogce)
 
     testImplementation(kotlin("test-junit"))
 }
@@ -29,12 +24,12 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "11"
+    compilerOptions.jvmTarget.set(JvmTarget.JVM_17)
 }
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of("11"))
+        languageVersion.set(JavaLanguageVersion.of("17"))
     }
 }
 
