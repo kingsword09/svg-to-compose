@@ -1,6 +1,5 @@
 package androidx.compose.material.icons.generator.util
 
-import androidx.compose.material.icons.generator.ClassNames
 import com.squareup.kotlinpoet.*
 
 /**

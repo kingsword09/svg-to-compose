@@ -2,7 +2,7 @@ package androidx.compose.material.icons.generator
 
 import androidx.compose.material.icons.generator.util.backingPropertySpec
 import androidx.compose.material.icons.generator.util.withBackingProperty
-import br.com.devsrsouza.svg2compose.GeneratedGroup
+import io.github.kingsword09.svg2compose.GeneratedGroup
 import com.squareup.kotlinpoet.*
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 

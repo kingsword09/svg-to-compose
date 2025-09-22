@@ -16,7 +16,6 @@
 
 package androidx.compose.material.icons.generator
 
-import com.google.common.base.CaseFormat
 import java.io.File
 
 /**
@@ -106,7 +105,13 @@ private fun processXmlFile(fileContent: String): String {
  * If the first character of [this] is a digit, the resulting name will be prefixed with an `_`
  */
 internal fun String.toKotlinPropertyName(): String {
-    return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, this).let { name ->
-        if (name.first().isDigit()) "_$name" else name
-    }
+    return this.split('_')
+        .filter { it.isNotEmpty() }
+        .joinToString("") { word ->
+            word.lowercase().replaceFirstChar { char ->
+                if (char.isLowerCase()) char.titlecase() else char.toString()
+            }
+        }.let { name ->
+            if (name.isNotEmpty() && name.first().isDigit()) "_$name" else name
+        }
 }

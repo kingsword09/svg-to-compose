@@ -17,7 +17,6 @@
 package androidx.compose.material.icons.generator.vector
 
 import androidx.compose.material.icons.generator.GraphicUnit
-import java.awt.LinearGradientPaint
 
 /**
  * Simplified representation of a vector, with root [nodes].

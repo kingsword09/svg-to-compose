@@ -24,7 +24,6 @@ import org.xmlpull.v1.XmlPullParser.END_TAG
 import org.xmlpull.v1.XmlPullParser.START_TAG
 import org.xmlpull.v1.XmlPullParserException
 import org.xmlpull.v1.XmlPullParserFactory
-import kotlin.math.log10
 
 /**
  * Parser that converts [icon]s into [Vector]s

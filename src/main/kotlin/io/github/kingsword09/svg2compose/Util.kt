@@ -1,4 +1,4 @@
-package br.com.devsrsouza.svg2compose
+package io.github.kingsword09.svg2compose
 
 import java.util.*
 

@@ -10,9 +10,7 @@ group = "io.github.kingsword09"
 version = "0.1.0"
 
 dependencies {
-    implementation(libs.google.guava)
     implementation(libs.android.tools.sdk)
-    implementation(libs.android.tools)
     implementation(libs.com.squareup)
     implementation(libs.org.ogce)
 

@@ -1,5 +1,7 @@
-package br.com.devsrsouza.svg2compose
+package io.github.kingsword09.svg2compose
 
+import io.github.kingsword09.svg2compose.Svg2Compose
+import io.github.kingsword09.svg2compose.VectorType
 import java.io.File
 
 

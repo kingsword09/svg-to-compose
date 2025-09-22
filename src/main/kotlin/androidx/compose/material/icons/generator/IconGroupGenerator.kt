@@ -1,7 +1,6 @@
 package androidx.compose.material.icons.generator
 
 import com.squareup.kotlinpoet.*
-import java.io.File
 
 class IconGroupGenerator(
     private val groupPackage: String,
